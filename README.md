@@ -105,8 +105,25 @@ Some important arguments are listed below:
 - `--uniform_candidate_weighting`: use static uniform candidate-label weighting instead of dynamic candidate-label refinement
 - `--shuffle_reliability`: shuffle the reliability signal for sanity-check analysis
 
-## Notes
+## Parameter Settings
 
-- The benchmark datasets are public MIPL datasets adopted from prior work.
-- The CRC-MIPL benchmark used in this project is feature-based. Therefore, the real-world analysis in the paper is based on instance-level feature representations rather than raw image patches.
-- To reproduce the exact results reported in the paper, please use the parameter settings described in the manuscript.
+The parameter settings used in our experiments are summarized below.
+
+| Dataset | Learning Rate | Batch Size | Epochs | `nr_samples` | `lambda_edl` |
+|--------|---------------|------------|--------|--------------|--------------|
+| MNIST_MIPL (`r=1`) | 5e-4 | 350 | 200 | 40 | 0.01 |
+| MNIST_MIPL (`r=2`) | 5e-4 | 350 | 200 | 30 | 0.01 |
+| MNIST_MIPL (`r=3`) | 5e-4 | 350 | 200 | 50 | 0.1 |
+| FMNIST_MIPL (`r=1`) | 5e-4 | 350 | 200 | 30 | 0.01 |
+| FMNIST_MIPL (`r=2`) | 5e-4 | 350 | 200 | 40 | 0.05 |
+| FMNIST_MIPL (`r=3`) | 5e-4 | 350 | 200 | 20 | 0.05 |
+| Birdsong_MIPL (`r=1`) | 0.001 | 910 | 500 | 10 | 0.2 |
+| Birdsong_MIPL (`r=2`) | 0.002 | 910 | 500 | 20 | 0.1 |
+| Birdsong_MIPL (`r=3`) | 0.005 | 910 | 500 | 30 | 0.5 |
+| SIVAL_MIPL (`r=1`) | 0.002 | 1050 | 500 | 30 | 0.05 |
+| SIVAL_MIPL (`r=2`) | 0.005 | 1050 | 500 | 20 | 0.05 |
+| SIVAL_MIPL (`r=3`) | 0.005 | 1050 | 500 | 30 | 0.2 |
+| CRC-MIPL-Row | 0.001 | 4900 | 500 | 10 | 0.1 |
+| CRC-MIPL-SBN | 0.001 | 4900 | 500 | 10 | 0.1 |
+| CRC-MIPL-KMeansSeg | 0.001 | 4900 | 500 | 10 | 0.1 |
+| CRC-MIPL-SIFT | 0.001 | 4900 | 500 | 10 | 0.1 |
